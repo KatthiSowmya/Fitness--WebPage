@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://127.0.0.1:5500/web.html -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KATTHI FITNESS</title>
+    <link rel="stylesheet" href="./KATTHI FITNESS_files/style.css">
+    <style>
+        body {
+            color: orangered;
+            margin: 0px;
+            padding: 0px;
+            background: url("back.png");
+
+        }
+
+        .left {
+            display: inline-block;
+            /* border: 2px solid rgb(216, 59, 59); */
+            position: absolute;
+            left: 60px;
+            top: 20px;
+        }
+
+        .left img {
+            width: 140px;
+            filter: invert(100%);
+        }
+
+        .left div {
+            line-height: 19px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .mid {
+            display: block;
+            width: 55%;
+            margin: 29px auto;
+            /* border: 2px solid rgb(50, 50, 227); */
+
+        }
+
+        .right {
+
+            position: absolute;
+            right: 43px;
+            top: 33px;
+            display: inline-block;
+            /* border: 2px solid rgb(255, 106, 131); */
+
+        }
+
+        .navbar {
+            display: inline-block;
+
+        }
+
+        .navbar li {
+            color: white;
+
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        .navbar li a {
+            color: orangered;
+            text-decoration: none;
+            padding: 34px;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            text-decoration: underline;
+            color: grey;
+        }
+
+        .btn {
+            margin: 0px 9px;
+            background-color: pink;
+            color: whitesmoke;
+
+            padding: 4px 10px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+
+        .btn:hover {
+            background-color: skyblue;
+        }
+
+        .container {
+            /* border: 2px solid black; */
+            margin: 106px 50px;
+            padding: 5px;
+            width: 33%;
+            border-radius: 28px;
+            background-color: whitesmoke;
+            background-image: url("back1.png");
+
+        }
+
+        .formgroup {
+            text-align: center;
+            display: grid;
+            width: 170px;
+            padding: 0px;
+
+            margin: 34px -4px;
+            font-size: 25px;
+            border-radius: 5px;
+        }
+
+        .container h1 {
+            text-align: left;
+        }
+
+        .container button {
+            display: block;
+            width: 50%;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="logo.png" alt="">
+            <div>
+                Sowmya Fitness Center
+            </div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="http://127.0.0.1:5500/web.html#">Home</a></li>
+                <li><a href="http://127.0.0.1:5500/web.html#">About us</a></li>
+                <li><a href="http://127.0.0.1:5500/web.html#">Fitness Calculator</a></li>
+                <li><a href="http://127.0.0.1:5500/web.html#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">call us now</button><button class="btn">email us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join the Best Gym Center </h1>
+        <form action="http://127.0.0.1:5500/noaction.php">
+            <div class="formgroup">
+                <input type="text" name="" placeholder="Enter your Name">
+                <input type="text" name="" placeholder="Enter your Gender">
+                <input type="text" name="" placeholder="Enter your Age">
+                <input type="text" name="" placeholder="Enter your Locality">
+                <input type="text" name="" placeholder="Enter your Email-id">
+                <input type="text" name="" placeholder="Enter your Phone-no">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+
+
+</body>
+
+</html>
